@@ -6,8 +6,8 @@
 
 
 ## 🚀 Demonstração
-[🔗 Link para o projeto em produção]()
-![Imagem prévia do Projeto]()
+[🔗 Link para o projeto em produção](https://interactive-modal.vercel.app/)
+![Imagem prévia do Projeto](./src/screenshots/preview-mobile.png)
 
 ---
 
@@ -70,11 +70,11 @@ interactive-modal/
 ```
 
 ## 🧑‍💻 Contribuindo
-1 - Faça um fork
-2 - Crie uma branch: ``git checkout -b minha-feature``
-3 - Commit: ``git commit -m 'feat: minha nova feature'``
-4 - Push: ``git push origin minha-feature``
-5 - Crie um Pull Request
+1 - Faça um fork <br>
+2 - Crie uma branch: ``git checkout -b minha-feature`` <br>
+3 - Commit: ``git commit -m 'feat: minha nova feature'`` <br>
+4 - Push: ``git push origin minha-feature`` <br>
+5 - Crie um Pull Request <br>
 
 ## 📈 Melhorias futuras
 - Enviar feedback para um backend real
