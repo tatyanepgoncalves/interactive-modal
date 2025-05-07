@@ -1,0 +1,365 @@
+:root {
+  --zinc50: #fafafa;
+  --zinc100: #f4f4f5;
+  --zinc200: #e4e4e7;
+  --zinc300: #d4d4d8;
+  --zinc400: #a1a1aa;
+  --zinc500: #71717a;
+  --zinc600: #52525b;
+  --zinc700: #3f3f46;
+  --zinc800: #27272a;
+  --zinc900: #18181b;
+  --zinc950: #09090b;
+  --purple400: #c084fc;
+  --purple600: #9333ea;
+  --purple800: #6b21a8;
+  --redLight: #fca5a5;
+  --red500:#ef4444;
+  --green: #84cc16;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button, .btnClose {
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--zinc100);
+  color: var(--zinc900);
+  display: grid;
+  place-items: center;
+  transition: all 0.5s;
+}
+
+body.dark {
+  background-color: var(--zinc900);
+  color: var(--zinc100);
+}
+
+.content {
+  width: 80%;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.active {
+  display: block;
+}
+
+body, header {
+  position: relative;
+}
+
+header, footer {
+  width: 100%;
+}
+
+header #btnMode {
+  position: absolute;
+  z-index: 30;
+}
+
+header #btnMode, 
+#btnFeed {
+  background-color: var(--purple400);
+  color: var(--zinc50);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border: 1px solid var(--purple400);
+}
+
+header #btnMode:hover, 
+#btnFeed:hover {
+  background-color: transparent;
+  color: var(--purple800);
+  border: 1px solid var(--purple400);
+}
+
+body.dark header #btnMode, 
+body.dark #btnFeed {
+  background-color: var(--purple800);
+  border: 1px solid var(--purple800);
+  color: var(--zinc100);
+}
+
+body.dark header #btnMode:hover, 
+body.dark #btnFeed:hover {
+  background-color: transparent;
+  border: 1px solid var(--purple800);
+}
+
+.content,
+.text-content, 
+.title, 
+.form,
+.form-content,
+.fields, #messageThanks {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content {
+  align-items: center;
+}
+
+.title {
+  max-width: 100%;
+}
+
+.title h1 {
+  color: var(--zinc900);
+}
+
+body.dark .title h1 {
+  color: var(--zinc50);
+}
+
+.title p {
+  color: var(--zinc700);
+}
+
+body.dark .title p {
+  color: var(--zinc300);
+}
+
+.modal.active {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+.modal-container {
+  background-color: var(--zinc100);
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+body.dark .modal-container {
+  background-color: var(--zinc900);
+}
+
+.btnClose {
+  position: absolute;
+  font-weight: 800;
+  color: var(--zinc950);
+}
+
+.btnClose:hover {
+  scale: 1.1;
+}
+
+#messageThanks {
+  display: none;
+}
+
+#messageThanks.active {
+  display: block;
+}
+
+.form.hide {
+  display: none;
+}
+
+.fields p {
+  display: none;
+}
+
+.fields.error p {
+  display: block;
+  color: var(--red500);
+  margin-top: 0.25rem;
+}
+
+body.dark .fields.error p {
+  color: var(--redLight);
+}
+
+.fields label {
+  color: var(--zinc900);
+  font-weight: 500;
+}
+
+body.dark .fields label {
+  color: var(--zinc100);
+  font-weight: 500;
+}
+
+.fields textarea {
+  resize: none;
+}
+
+.fields input, 
+.fields textarea {
+  border: 1px solid var(--zinc400);
+  background-color: transparent;
+  border-radius: 0.25rem;
+  color: var(--zinc900);
+}
+
+body.dark .fields input, 
+body.dark .fields textarea {
+  border: 1px solid var(--zinc600);
+}
+
+body.dark .fields.error input, 
+body.dark .fields.error textarea {
+  border: 1px solid var(--redLight);
+  color: var(--zinc100);
+}
+
+body.dark .fields input::placeholder, 
+body.dark .fields textarea::placeholder {
+  color: var(--zinc300);
+}
+
+.fields.error input, 
+.fields.error textarea {
+  border: 1px solid var(--red500);
+}
+
+#btnSend {
+  background-color: var(--purple600);
+  color: var(--zinc100);
+}
+
+
+body.dark .btnClose {
+  color: var(--zinc200);
+}
+
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  color: var(--zinc700);
+}
+
+body.dark footer p {
+  color: var(--zinc400);
+}
+
+@media (width >= 22.5rem) and (width < 48rem) {
+  body {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  button {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  header {
+    padding: 0 1rem;
+    height: 3rem;
+  }
+  
+  .content {
+    align-items: center;
+    justify-content: space-between;
+    height: 100lvh;
+  }
+
+  header #btnMode, #btnFeed {
+    padding: 0.5rem 1rem;
+    right: 1rem;
+    top: 0.5rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  .text-content {
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .image-feeback {
+    display: none;
+  }
+
+  .title {
+    gap: 0.5rem;
+  }
+
+  .title h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .btnClose {
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .form, 
+  .form-content,
+  #messageThanks {
+    gap: 1rem;
+  }
+
+  .fields label {
+    margin-bottom: 0.25rem;
+  }
+  
+  .fields input, 
+  .fields textarea, 
+  #btnSend {
+    padding: 0.5rem 1rem;
+  }
+
+  #messageThanks {
+    justify-content: center;
+  }
+
+  #messageThanks .text h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+
+  footer {
+  padding: 1rem 0;
+  }
+}
