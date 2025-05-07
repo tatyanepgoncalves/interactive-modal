@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive feedback modal for the website"
+    />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Site de feedback com modal interativo</title>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <button id="btnMode"></button>
+      </header>
+
+      <main>
+        <section class="text-content" id="text-content">
+          <div class="title">
+            <h1>Sua opinião vale ouro!</h1>
+            <p>
+              Nos diga rapidinho o que você achou da experiência. Leva menos de
+              1 minuto, prometo!
+            </p>
+          </div>
+
+          <button id="btnFeed" onclick="openModal()">Enviar feedback</button>
+
+          <img
+            src="./src/images/image-home.svg"
+            alt="Image de duas pessoas com estrelas"
+            loading="lazy"
+          />
+        </section>
+
+        <section id="modal" class="modal">
+          <div class="modal-container" id="modalContainer">
+            <button id="btnClose" class="btnClose" onclick="closeModal()">
+              X
+            </button>
+            <div id="form" class="form">
+              <section class="elements">
+                <div class="text">
+                  <h2>Queremos te ouvir!</h2>
+                  <p>
+                    Tem algo legal para contar ou viu algo que podemos melhorar?
+                    Nós conte aqui embaixo.
+                  </p>
+                </div>
+
+                <img
+                  src="./src/images/image-feeback.svg"
+                  alt="Pessoas enviando comentários sobre algo."
+                  loading="lazy"
+                  class="image-feeback"
+                />
+              </section>
+
+              <form class="form-content">
+                <div class="fields" id="fieldsName">
+                  <label for="name">Nome completo</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Digite seu nome completo..."
+                  />
+                </div>
+                <div class="fields" id="fieldsEmail">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Digite um email"
+                  />
+                </div>
+                <div class="fields" id="fieldsMessage">
+                  <label for="feedback">Mensagem de texto</label>
+                  <textarea
+                    name="feedback"
+                    id="feedback"
+                    placeholder="Digite a mensagem"
+                  ></textarea>
+                </div>
+
+                <button id="btnSend" type="submit">Enviar agora</button>
+              </form>
+            </div>
+
+            <div id="messageThanks">
+              <div class="text">
+                <h2>Obrigada pelo feedback!</h2>
+                <p>A gente já está lendo com carinho.</p>
+              </div>
+
+              <img src="./src/images/image-avalie.svg" loading="lazy" alt="Image avalie" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Feito por Tatyane Gonçalves</p>
+      </footer>
+    </div>
+
+    <script src="./src/scripts/index.js" defer></script>
+  </body>
+</html>
